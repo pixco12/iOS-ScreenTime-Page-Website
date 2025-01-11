@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Arial, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: 1000;
+}
+#info {
+    margin-top: 30px;
+}
+img {
+    margin-bottom: 20px;
+    height: 72px;
+}
+#ask {
+    position: absolute;
+    background-color: transparent;
+    border: 0;
+    justify-self: self-end;
+    bottom: 42px;
+}
+#ask p {
+    color: #4795ff;
+    font-size: medium;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Arial, sans-serif;
+}
+.prompts{
+    display: flex;
+    width: 230px;
+    background-color: #2b2b2b;
+    flex-direction: column;
+    padding: 12px 0;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px #181818;
+    position: absolute;
+    bottom: 74px;
+    opacity: 0; 
+    transform: scale(0); 
+
+}
+.prompts p {
+    margin: 0 12px;
+}
+.prompts hr {
+    border: 0.1px #696a69 solid;
+}
+.prompts.show {
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.2s;
+}
+.prompts.hide {
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.2s;
+}
+.pwdPage{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000095;
+    height: 0;
+    opacity: 0;
+    width: 0;
+}
+.pwdPage.show {
+    width: 100vw;
+    opacity: 100%;
+    height: 100%;
+}
+
+.passwordbox{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 315px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 470px;
+}
+.pwdDisplay{
+    background-color: #1c1c1e;
+    
+}
+.pwdDisplay h4{
+    text-align: center;
+    margin-top: 60px;
+}
+#pwdProgress{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 25px;
+    gap: 15px;
+}
+.pwdDisplay p:nth-child(1) {
+    text-align: end;
+    color: #4795ff;
+    margin: 15px;
+}
+#failedAttempt {
+    text-align: center;
+    color: #ffffff;
+    background-color: #fe4538;
+    padding: 5px 15px;
+    width: max-content;
+    border-radius: 12px;
+    margin: auto;
+    margin-top: 20px;
+    opacity: 0;
+}
+#failedAttempt.show{
+    opacity: 1;
+}
+#failedAttempt.hide{
+    opacity: 0;
+}
+.pwdInput{
+    background-color: #3d3d40;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 3px;
+    padding-top: 7px;
+}
+.pwdInput div{
+    background-color: grey;
+    margin: 3.5px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgb(31, 31, 31);
+}
+.pwdInput div h3{
+    text-align: center;
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 2px;
+}
+.pwdInput div p{
+    font-size: 10px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.pwdInput div:nth-child(10){
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pwdInput div:nth-child(10) h3{
+    margin-top:0;
+}
+.pwdInput div:nth-child(11) ion-icon{
+    font-size: 30px;
+}
+.pwdInput div:nth-child(11){
+    background-color: transparent;
+    box-shadow: none;
+    margin: auto;
+}
+.passwordbox.hide {
+    transform: translateY(85vh);
+    transition: 0.7s;
+    
+}
+body img.open{
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
