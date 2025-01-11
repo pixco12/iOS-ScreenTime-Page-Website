@@ -82,7 +82,7 @@ backspaceBtn.addEventListener("click", () => {
     backspaceBtn.setAttribute('name', 'backspace');
     setTimeout(() => {
         backspaceBtn.setAttribute('name', 'backspace-outline')
-    },30)
+    },50)
     passEntered = passEntered.toString().slice(0, -1)
     console.log(passEntered)
     const progressDot = document.querySelector(`#pwdProgress ion-icon:nth-child(${Number(passEntered.toString().length)+1})`)
@@ -96,7 +96,7 @@ for (let i = 1; i < 10; i++){
         pwdButton.style.backgroundColor = "#343438"
         setTimeout(() => {
             pwdButton.style.backgroundColor = "grey"
-        },30)
+        },50)
         if (passEntered.length != 4){
             passEntered = passEntered + pwdButtonH3.innerHTML
             const progressDot = document.querySelector(`#pwdProgress ion-icon:nth-child(${passEntered.length})`)
