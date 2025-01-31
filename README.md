@@ -5,3 +5,7 @@ This website will only work for iOS dark mode users and only for iPads.
 Demo Website : https://screentimelimit.netlify.app/
 
 For Educational Purposes Only!
+
+# Updates
+
+- Fixed the 0 in the password area not working
