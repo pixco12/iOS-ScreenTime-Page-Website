@@ -89,7 +89,7 @@ backspaceBtn.addEventListener("click", () => {
     progressDot.setAttribute('name', 'ellipse-outline');
 })
 
-for (let i = 1; i < 10; i++){
+for (let i = 1; i <= 10; i++){
     const pwdButton = document.querySelector(`.pwdInput div:nth-child(${i})`)
     const pwdButtonH3 = document.querySelector(`.pwdInput div:nth-child(${i}) h3`)
     pwdButton.addEventListener("click", () => {
